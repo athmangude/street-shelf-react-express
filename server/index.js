@@ -1,3 +1,5 @@
+global.navigator = { navigator: 'all' };
+
 import path from 'path';
 import express from 'express';
 import handlebars from 'express-handlebars';
