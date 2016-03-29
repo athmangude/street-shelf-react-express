@@ -8,10 +8,13 @@ import MessageList from 'components/message-list';
 import MessageEntryBox from 'components/message-entry-box';
 import * as messageActionCreators from 'actions/message-actions';
 
+import {AppBar} from 'material-ui';
+
 class App extends Component {
     render() {
         return (
             <div>
+                <AppBar />
                 <MessageList userId={this.props.userId} messages={this.props.message} />
                 <MessageEntryBox
                     value={this.props.currentMessage}
