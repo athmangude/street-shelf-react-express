@@ -8,7 +8,15 @@ class MessageList extends Component {
 
     render() {
         return (
-            <ol className="message-list">
+            <ol
+                className="message-list"
+                style={{
+                    height: '240px',
+                    listStyle: 'none',
+                    margin: 0,
+                    overflow: 'auto',
+                    padding: '10px'
+                }}>
                 {this.props.messages.map((message, index) => {
                     const messageClass = message.userId !== this.props.userId ? 'is-response' : '';
                     return (
