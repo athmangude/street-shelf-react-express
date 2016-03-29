@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
-import {} from './style.scss';
 
 import {TextField} from 'material-ui';
 
 class MessageEntryBox extends Component {
     render() {
         return (
-            <div className="message-entry-box">
+            <div
+                className="message-entry-box"
+                style={{
+                    background: '#dedede',
+                    padding: '10px'
+                }}>
                 <TextField
                     name="message"
                     value={this.props.value}
