@@ -11,11 +11,18 @@ import * as messageActionCreators from 'actions/message-actions';
 import {AppBar, Card} from 'material-ui';
 import MuiThemeProvider from 'material-ui/lib/MuiThemeProvider';
 import getMuiTheme from 'material-ui/lib/styles/getMuiTheme';
+import myMaterialUITheme from './../../MaterialUITheme';
+
+const muiTheme = getMuiTheme(myMaterialUITheme, { userAgent: 'all' });
 
 class App extends Component {
+    constructor(props, context) {
+      super(props, context);
+    }
+
     render() {
         return (
-            <div>
+            <MuiThemeProvider muiTheme={muiTheme}>
                 <Card>
                     <AppBar title="Awesome Chat Window" />
                     <MessageList userId={this.props.userId} messages={this.props.message} />
@@ -25,7 +32,7 @@ class App extends Component {
                     onChange={this.props.updateMessage}
                     onSubmit={this.props.addMessage} />
                 </Card>
-            </div>
+            </MuiThemeProvider>
         );
     }
 }
@@ -42,5 +49,5 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators(messageActionCreators, dispatch);
 }
 
+
 export default connect(mapStateToProps, mapDispatchToProps)(App);
-// export default MuiThemeProvider(getMuiTheme(null, { userAgent: 'all' }))();
