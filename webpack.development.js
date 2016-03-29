@@ -35,13 +35,13 @@ const devConfig = Object.assign({}, config.client, {
     module: {
         loaders: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 include: config.CLIENT_DIR,
                 loader: 'react-hot-loader!babel-loader'
             },
             {
-                test: /\.less$/,
-                loader: 'style-loader!css-loader!less-loader'
+                test: /\.scss$/,
+                loader: 'style-loader!css-loader!sass-loader'
             }
         ]
     },

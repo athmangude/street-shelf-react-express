@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 
-import {} from './style.less';
+import {} from './style.scss';
 
 import MessageList from 'components/message-list';
 import MessageEntryBox from 'components/message-entry-box';

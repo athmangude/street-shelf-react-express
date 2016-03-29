@@ -13,14 +13,15 @@ export const babelLoader = {
 };
 
 export const cssLoader = {
-  test: /\.less$/,
-  loader: ExtractTextPlugin.extract('style-loader', 'css-loader!less-loader')
+  test: /\.scss$/,
+  loader: ExtractTextPlugin.extract('style-loader', 'css-loader!sass-loader')
 };
 
 export const aliases = {
     components: path.resolve(CLIENT_DIR, 'components'),
     reducers: path.resolve(CLIENT_DIR, 'reducers'),
-    actions: path.resolve(CLIENT_DIR, 'actions')
+    actions: path.resolve(CLIENT_DIR, 'actions'),
+    extensions: ['', '.js', '.jsx']
 };
 
 export const client = {
