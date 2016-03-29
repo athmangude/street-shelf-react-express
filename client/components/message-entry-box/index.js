@@ -1,16 +1,22 @@
 import React, {Component} from 'react';
 import {} from './style.scss';
 
+import {TextField} from 'material-ui';
+
 class MessageEntryBox extends Component {
     render() {
         return (
             <div className="message-entry-box">
-                <textarea
+                <TextField
                     name="message"
-                    placeholder = "Enter a message"
                     value={this.props.value}
                     onChange={this.handleChange.bind(this)}
-                    onKeyPress={this.handleKeyPress.bind(this)} />
+                    onKeyPress={this.handleKeyPress.bind(this)}
+                    floatingLabelText="Type your message"
+                    multiLine={true}
+                    fullWidth={true}
+                    rows={2}
+                />
             </div>
         );
     }
