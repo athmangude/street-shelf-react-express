@@ -7,8 +7,9 @@ import MessageEntryBox from 'components/message-entry-box';
 import * as messageActionCreators from 'actions/message-actions';
 
 import {AppBar, Card} from 'material-ui';
-import MuiThemeProvider from 'material-ui/lib/MuiThemeProvider';
-import getMuiTheme from 'material-ui/lib/styles/getMuiTheme';
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import myMaterialUITheme from './../../MaterialUITheme';
 
 const muiTheme = getMuiTheme(myMaterialUITheme, { userAgent: 'all' });
